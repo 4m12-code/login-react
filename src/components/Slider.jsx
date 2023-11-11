@@ -1,8 +1,3 @@
-import fondo1 from "../img/fondo.jpg"
-import fondo3 from "../img/fondo2.jpg"
-import fondo4 from "../img/fondo3.jpg"
-import fondo2 from "../img/fondo4.jpg"
-
 import React from 'react';
 import estilos from '../Slider.module.css';
 
