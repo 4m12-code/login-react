@@ -1,5 +1,9 @@
+/*
+    Componente para generar slider informativo y el control de navegación del mismo.
+*/
+
 import React from 'react';
-import estilos from '../Slider.module.css';
+import estilos from '../Slider.module.css'; /* Vincular el archivo de hoja de estilos*/
 
 function Slider({ imagenes }) {
 	// Variables y Estados
@@ -10,14 +14,14 @@ function Slider({ imagenes }) {
 	if (!Array.isArray(imagenes) || cantidad === 0) return;
 
 	const siguienteImagen = () => {
-		setImagenActual(imagenActual === cantidad - 1 ? 0 : imagenActual + 1);
+		setImagenActual(imagenActual === cantidad - 1 ? 0 : imagenActual + 1); //Presentar la siguente imagen y liminar el final.
 	};
 
 	const anteriorImagen = () => {
-		setImagenActual(imagenActual === 0 ? cantidad - 1 : imagenActual - 1);
+		setImagenActual(imagenActual === 0 ? cantidad - 1 : imagenActual - 1); //Presentar la anterior imagen y limitar el inicio.
 	};
 
-	return (
+	return ( /* Retornar la estrucutra  que contidene el slider y el control de navegacion*/
 		<div className={estilos.container}>
 			<button onClick={anteriorImagen}>←</button>
 			{imagenes.map((imagen, index) => {
